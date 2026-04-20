@@ -1,0 +1,9 @@
+FROM ubuntu
+LABEL TITLE This is for setting up the default path
+MAINTAINER Author Sudhan
+ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.117/bin/apache-tomcat-9.0.117.tar.gz /etc/
+WORKDIR /devops/AWS/subhu/
+ARG course=devops
+ENV cloud=AWS
+RUN echo "We are learning $course with $cloud."
+RUN touch hello
