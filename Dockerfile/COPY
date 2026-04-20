@@ -1,0 +1,4 @@
+FROM ubuntu
+Label This is my first image
+Maintainer Author Sudharsan
+COPY app.java /etc/
