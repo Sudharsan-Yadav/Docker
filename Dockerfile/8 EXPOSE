@@ -1,0 +1,6 @@
+FROM ubuntu
+LABEL TITLE This is for exposing the port number
+MAINTAINER Author Subhu
+RUN touch file{1..5]
+RUN mkdir folder
+EXPOSE 3000
