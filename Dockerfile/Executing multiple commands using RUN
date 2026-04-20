@@ -1,0 +1,11 @@
+FROM ubuntu
+LABEL TITLE This is for executing multiple commands using RUN
+MAINTAINER Author Sudheer
+ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.117/bin/apache-tomcat-9.0.117.tar.gz /etc/
+WORKDIR /New/Sudhan
+ARG course=devops
+ENV cloud=AWS
+RUN echo "We are learning $course with $cloud."
+RUN touch file{1..5]
+RUN mkdir folder{1..3}
+RUN apt update-y
