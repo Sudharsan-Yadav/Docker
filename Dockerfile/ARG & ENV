@@ -1,0 +1,6 @@
+FROM ubuntu
+LABEL TITLE This is my fourth image
+MAINTAINER Author Saraswathi
+COPY app.java .
+ARG Course=devops
+ENV Cloud=AWS
