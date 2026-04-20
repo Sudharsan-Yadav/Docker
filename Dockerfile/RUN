@@ -2,6 +2,6 @@ FROM ubuntu
 LABEL TITLE This is my fifth image
 MAINTAINER Author Subhu
 COPY app.java .
-ARG Course-devops
+ARG Course=devops
 ENV Cloud=AWS
 RUN echo "We are learning $Course with $Cloud."
