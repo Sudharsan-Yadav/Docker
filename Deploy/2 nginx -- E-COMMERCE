@@ -1,0 +1,4 @@
+FROM nginx
+LABEL TITLE This is the another e-commerce application
+MAINTAINER Author Sudheer
+COPY index.html /usr/share/nginx/html
