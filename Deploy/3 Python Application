@@ -1,7 +1,7 @@
 FROM python:3
 LABEL TITLE This is the python code for Flight Ticket Bookings
 MAINTAINER Author Subhu
-EXPOSE 5000
+EXPOSE 8000
 WORKDIR /myapp
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
