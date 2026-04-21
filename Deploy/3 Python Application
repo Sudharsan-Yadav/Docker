@@ -1,4 +1,4 @@
-FROM Python:3
+FROM python:3
 LABEL TITLE This is the python code for Flight Ticket Bookings
 MAINTAINER Author Subhu
 EXPOSE 5000
