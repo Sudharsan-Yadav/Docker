@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ShopEase | E‑Commerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+    }
+
+    /* Navbar */
+    header {
+      background: #111;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    .cart {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Banner */
+    .banner {
+      background-image: url("https://images.unsplash.com/photo-1607082349566-1870a4b94f68");
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .banner h2 {
+      background: rgba(0,0,0,0.5);
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 32px;
+    }
+
+    /* Product Section */
+    .products {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-body h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .price {
+      color: #27ae60;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .card-body button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #111;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card-body button:hover {
+      background: #27ae60;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🛒 ShopEase</h1>
+    <div class="cart">Cart: <span id="cartCount">0</span></div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="banner">
+    <h2>Shop Smart. Live Better.</h2>
+  </section>
+
+  <!-- Products -->
+  <section class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" />
+      <div class="card-body">
+        <h3>Smart Watch</h3>
+        <p class="price">₹4,999</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" />
+      <div class="card-body">
+        <h3>Wireless Headphones</h3>
+        <p class="price">₹3,499</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" />
+      <div class="card-body">
+        <h3>Casual Shoes</h3>
+        <p class="price">₹2,799</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" />
+      <div class="card-body">
+        <h3>DSLR Camera</h3>
+        <p class="price">₹39,999</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 ShopEase | Frontend Demo
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    let cart = 0;
+
+    function addToCart() {
+      cart++;
+      document.getElementById("cartCount").innerText = cart;
+      alert("✅ Product added to cart!");
+    }
+  </script>
+
+</body>
+</html>
