@@ -1,0 +1,21 @@
+---
+version: "3"
+services:
+  bus:
+    container_name: cont1
+    image: shaikmustafa/paytm:bus
+    ports:
+      - "8081:80"
+
+  movie:
+    container_name: cont2
+    image: shaikmustafa/paytm:movie
+    ports:
+      - "8082:80"
+
+  bank:
+    container_name: cont3
+    image: shaikmustafa/paytm:bank
+    ports:
+      - "8083:80"
+...
