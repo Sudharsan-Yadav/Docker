@@ -1,0 +1,38 @@
+---
+version: "3"
+services:
+  aws:
+    container_name: cont1
+    image: nginx
+    deploy:
+      replicas: 1
+    ports:
+      - "9999:80"
+    volumes:
+      - appvolume:/usr/share/nginx/html/
+    networks:
+      - appnetwork
+      - dbnetwork
+
+  azure:
+    container_name: cont2
+    image: httpd
+    deploy:
+      replicas: 1
+    ports:
+      - "8888:80"
+    volumes:
+      - dbvolume:/usr/local/apache2/htdocs/
+    networks:
+      - dbnetwork
+      - appnetwork
+
+volumes:
+  appvolume:
+  dbvolume:
+
+networks:
+  appnetwork:
+    driver: bridge
+  dbnetwork:
+    driver: bridge
