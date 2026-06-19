@@ -31,4 +31,5 @@ networks:
   appnetwork:
     driver: bridge
   dbnetwork:
+    driver: bridge
 ...
